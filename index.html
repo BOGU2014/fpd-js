@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客製化襪子設計</title>
+    <script src="https://cdn.jsdelivr.net/npm/@radykal/fpd-js@latest"></script>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        #fpd-container { width: 80%; margin: auto; height: 600px; border: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <h1>客製化襪子設計工具</h1>
+    <div id="fpd-container"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            new FancyProductDesigner('#fpd-container', {
+                productsJSON: "products.json"
+            });
+        });
+    </script>
+</body>
+</html>

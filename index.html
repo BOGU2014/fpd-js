@@ -15,11 +15,15 @@
     <div id="fpd-container"></div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function() {
+        if (typeof FancyProductDesigner !== "undefined") {
             new FancyProductDesigner('#fpd-container', {
                 productsJSON: "products.json"
             });
-        });
-    </script>
+        } else {
+            console.error("FancyProductDesigner 未成功載入");
+        }
+    });
+</script>
 </body>
 </html>

@@ -16,13 +16,15 @@
 
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        if (typeof FancyProductDesigner !== "undefined") {
-            new FancyProductDesigner('#fpd-container', {
-                productsJSON: "products.json"
-            });
-        } else {
-            console.error("FancyProductDesigner 未成功載入");
-        }
+        setTimeout(() => {
+            if (typeof FancyProductDesigner !== "undefined") {
+                new FancyProductDesigner('#fpd-container', {
+                    productsJSON: "products.json"
+                });
+            } else {
+                console.error("❌ FancyProductDesigner 未成功載入！請檢查 fpd-js 連結");
+            }
+        }, 2000); // 延遲 2 秒，確保 fpd-js 有時間載入
     });
 </script>
 </body>
